@@ -286,6 +286,13 @@ Working Example:
 
 ### Asset Modules
 
+    rules: [
+        {
+          test: /\.png/,
+          type: 'asset/resource'
+        }
+      ]
+
 Prior to webpack 5 it was common to use:
 
 -   **raw-loader**: to import a file as a string
@@ -298,14 +305,6 @@ Asset Modules type replaces all of these loaders by adding 4 new module types:
 -   **asset/inline**: exports a data URI of the asset. Previously achievable by using url-loader.
 -   **asset/source**: exports the source code of the asset. Previously achievable by using raw-loader.
 -   **asset**: automatically chooses between exporting a data URI and emitting a separate file. Previously achievable by using url-loader with asset size limit.
-
-    rules: [
-        {
-          test: /\.png/,
-          type: 'asset/resource'
-        }
-      ]
-
 
 <a id="org77a900a"></a>
 
