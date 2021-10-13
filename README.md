@@ -1,41 +1,41 @@
 
 # Table of Contents
 
-1.  [React and TypeScript Essential packages](#org50fcb1e)
-2.  [Config Typescript tsconfig.json(root path)](#org338cf2b)
-3.  [Root React Component(src folder)](#org4787dd9)
-4.  [Root index HTML(src folder)](#org5a87c48)
-5.  [Adding Babel Packages](#org54ea4e0)
-6.  [Babel Config (.babelrc at root path)](#orgfedf5ce)
-7.  [Adding linting](#orgb6a9268)
-8.  [ESLint configuration file (.eslintrc.json at root path)](#org0954fd5)
-9.  [Webpack Package](#orgbb7ee0d)
-10. [Package to transpile react and typescript code into JavaScript](#org2ba3703)
-11. [Package to generate the HTML](#orgbae4916)
-12. [Webpack Configuration](#org8ba7fe2)
-    1.  [Support images and fonts](#org2d42d91)
-        1.  [Configuration to support images and fonts with url loader](#orgdceb122)
-        2.  [Asset Modules](#orgf2aa077)
-    2.  [Webpack Development configuration](#orgb0e3fcb)
-        1.  [Config package.json to run in dev mode](#org3ec5959)
-        2.  [Add type checking package to webpack](#org2b0baf0)
-        3.  [Add type checking to webpack config `webpack.dev.config.ts`](#org1dae882)
-        4.  [Add linting into the webpack process](#org53d76f2)
-        5.  [Add ESLint config to webpack.dev.config.ts](#org7b60c23)
-    3.  [Webpack Production configuration](#orgdf787c8)
-        1.  [Configuring production (webpack.prod.config.ts)](#org8f1c701)
-        2.  [NPM script to build the app for production](#org8fd06f5)
-        3.  [Build Process](#org2ab7843)
-    4.  [Setting up CSS with webpack](#org6fa0724)
-        1.  [Add the configuration to webpack](#org727b278)
-    5.  [Setting up CSS with webpack (Production)](#org7f9d699)
-        1.  [Configuration to production mode](#orge9aad8a)
-    6.  [Setting up Sass with webpack](#orgd0b1103)
-        1.  [Sass configuration](#org32d2f02)
-        2.  [Sass configuration for production environment](#org9e7d5ec)
+1.  [React and TypeScript Essential packages](#org49f9296)
+2.  [Config Typescript tsconfig.json(root path)](#org40b64da)
+3.  [Root React Component(src folder)](#orge938303)
+4.  [Root index HTML(src folder)](#orgd653b17)
+5.  [Adding Babel Packages](#orgeacfc5e)
+6.  [Babel Config (.babelrc at root path)](#org7c5597d)
+7.  [Adding linting](#org4c46a78)
+8.  [ESLint configuration file (.eslintrc.json at root path)](#org567a9e7)
+9.  [Webpack Package](#org79f2c3b)
+10. [Package to transpile react and typescript code into JavaScript](#org8790b47)
+11. [Package to generate the HTML](#org745b7b1)
+12. [Webpack Configuration](#orgb95d197)
+    1.  [Support images and fonts](#org9f2c5bb)
+        1.  [Configuration to support images and fonts with url loader](#org46c089e)
+        2.  [Asset Modules](#org61c2209)
+    2.  [Webpack Development configuration](#org77a900a)
+        1.  [Config package.json to run in dev mode](#org44e5aa4)
+        2.  [Add type checking package to webpack](#orga230713)
+        3.  [Add type checking to webpack config `webpack.dev.config.ts`](#org7c1d4a0)
+        4.  [Add linting into the webpack process](#org52f1257)
+        5.  [Add ESLint config to webpack.dev.config.ts](#orgc570232)
+    3.  [Webpack Production configuration](#orgdcf5b86)
+        1.  [Configuring production (webpack.prod.config.ts)](#org716245e)
+        2.  [NPM script to build the app for production](#orgf484632)
+        3.  [Build Process](#org499a1a6)
+    4.  [Setting up CSS with webpack](#org3263a30)
+        1.  [Add the configuration to webpack](#org488db0d)
+    5.  [Setting up CSS with webpack (Production)](#org941ca65)
+        1.  [Configuration to production mode](#org55ee0c2)
+    6.  [Setting up Sass with webpack](#org4775790)
+        1.  [Sass configuration](#orgd995e23)
+        2.  [Sass configuration for production environment](#org7e14b17)
 
 
-<a id="org50fcb1e"></a>
+<a id="org49f9296"></a>
 
 # React and TypeScript Essential packages
 
@@ -44,7 +44,7 @@
     npm install --save-dev @types/react @types/react-dom
 
 
-<a id="org338cf2b"></a>
+<a id="org40b64da"></a>
 
 # Config Typescript tsconfig.json(root path)
 
@@ -82,7 +82,7 @@ TypeScript is only used for type checking. Babel transpile the code.
 -   **include**: These are the files and folders for TypeScript to check. In our project, we have specified all the files in the src folder.
 
 
-<a id="org4787dd9"></a>
+<a id="orge938303"></a>
 
 # Root React Component(src folder)
 
@@ -103,7 +103,7 @@ TypeScript is only used for type checking. Babel transpile the code.
 `index.tsx`
 
 
-<a id="org5a87c48"></a>
+<a id="orgd653b17"></a>
 
 # Root index HTML(src folder)
 
@@ -123,7 +123,7 @@ TypeScript is only used for type checking. Babel transpile the code.
 Component at index.tsx eventually will be displayed in index.html.
 
 
-<a id="org54ea4e0"></a>
+<a id="orgeacfc5e"></a>
 
 # Adding Babel Packages
 
@@ -136,7 +136,7 @@ Component at index.tsx eventually will be displayed in index.html.
 -   **@babel/plugin-transform-runtime** and **@babel/runtime**: These are plugins that allow us to use the async and await JavaScript features.
 
 
-<a id="orgfedf5ce"></a>
+<a id="org7c5597d"></a>
 
 # Babel Config (.babelrc at root path)
 
@@ -159,7 +159,7 @@ Component at index.tsx eventually will be displayed in index.html.
 This configuration tells Babel to use the plugins we have installed.
 
 
-<a id="orgb6a9268"></a>
+<a id="org4c46a78"></a>
 
 # Adding linting
 
@@ -174,7 +174,7 @@ This configuration tells Babel to use the plugins we have installed.
 ESLint can be configured in a .eslintrc.json file in the project root
 
 
-<a id="org0954fd5"></a>
+<a id="org567a9e7"></a>
 
 # ESLint configuration file (.eslintrc.json at root path)
 
@@ -208,7 +208,7 @@ ESLint can be configured in a .eslintrc.json file in the project root
 We have configured ESLint to use the TypeScript parser, and the standard React and TypeScript rules as a base set of rules. We’ve explicitly added the two React hooks rules and suppressed the react/prop-types rule because prop types aren’t relevant in React with TypeScript projects. We have also told ESLint to detect the version of React we are using.
 
 
-<a id="orgbb7ee0d"></a>
+<a id="org79f2c3b"></a>
 
 # Webpack Package
 
@@ -218,21 +218,21 @@ We have configured ESLint to use the TypeScript parser, and the standard React a
 TypeScript types are included in the webpack package. the second package is the webpack-dev-server that we will use during development.
 
 
-<a id="org2ba3703"></a>
+<a id="org8790b47"></a>
 
 # Package to transpile react and typescript code into JavaScript
 
     npm install --save-dev babel-loader
 
 
-<a id="orgbae4916"></a>
+<a id="org745b7b1"></a>
 
 # Package to generate the HTML
 
     npm install --save-dev html-webpack-plugin
 
 
-<a id="org8ba7fe2"></a>
+<a id="orgb95d197"></a>
 
 # Webpack Configuration
 
@@ -241,7 +241,7 @@ The webpack configuration file is JavaScript based as standard. However, we can 
     npm install --save-dev ts-node
 
 
-<a id="org2d42d91"></a>
+<a id="org9f2c5bb"></a>
 
 ## Support images and fonts
 
@@ -250,7 +250,7 @@ The webpack configuration file is JavaScript based as standard. However, we can 
 -   **url-loader**: loader for webpack which transforms files into base64 URIs.
 
 
-<a id="orgdceb122"></a>
+<a id="org46c089e"></a>
 
 ### Configuration to support images and fonts with url loader
 
@@ -282,7 +282,7 @@ Working Example:
     import img from './image.png';
 
 
-<a id="orgf2aa077"></a>
+<a id="org61c2209"></a>
 
 ### Asset Modules
 
@@ -307,7 +307,7 @@ Asset Modules type replaces all of these loaders by adding 4 new module types:
       ]
 
 
-<a id="orgb0e3fcb"></a>
+<a id="org77a900a"></a>
 
 ## Webpack Development configuration
 
@@ -371,7 +371,7 @@ Asset Modules type replaces all of these loaders by adding 4 new module types:
 -   **devServer**: configures the Webpack development server. We tell Webpack that the root of the webserver is the build folder, and to serve files on port 4000. historyApiFallback is necessary for deep links to work in multi-page apps. We are also telling Webpack to open the browser after the server has been started.
 
 
-<a id="org3ec5959"></a>
+<a id="org44e5aa4"></a>
 
 ### Config package.json to run in dev mode
 
@@ -382,14 +382,14 @@ Asset Modules type replaces all of these loaders by adding 4 new module types:
 The script starts the Webpack development server. We have used the config option to reference the development configuration file we have just created. Notice that Webpack hasn’t bundled any files in the build folder. This is because the files are in memory in the Webpack dev server.
 
 
-<a id="org2b0baf0"></a>
+<a id="orga230713"></a>
 
 ### Add type checking package to webpack
 
     npm install --save-dev fork-ts-checker-webpack-plugin @types/fork-ts-checker-webpack-plugin
 
 
-<a id="org1dae882"></a>
+<a id="org7c1d4a0"></a>
 
 ### Add type checking to webpack config `webpack.dev.config.ts`
 
@@ -409,14 +409,14 @@ The script starts the Webpack development server. We have used the config option
 We have used the async flag to tell Webpack to wait for the type checking process to finish before it emits any code.
 
 
-<a id="org53d76f2"></a>
+<a id="org52f1257"></a>
 
 ### Add linting into the webpack process
 
     npm install --save-dev eslint-webpack-plugin
 
 
-<a id="org7b60c23"></a>
+<a id="orgc570232"></a>
 
 ### Add ESLint config to webpack.dev.config.ts
 
@@ -436,12 +436,12 @@ We have used the async flag to tell Webpack to wait for the type checking proces
 We have used the extensions setting to tell the plugin to lint TypeScript files as well as JavaScript files.
 
 
-<a id="orgdf787c8"></a>
+<a id="orgdcf5b86"></a>
 
 ## Webpack Production configuration
 
 
-<a id="org8f1c701"></a>
+<a id="org716245e"></a>
 
 ### Configuring production (webpack.prod.config.ts)
 
@@ -508,7 +508,7 @@ This is similar to the development configuration with the following differences:
     npm install --save-dev clean-webpack-plugin
 
 
-<a id="org8fd06f5"></a>
+<a id="orgf484632"></a>
 
 ### NPM script to build the app for production
 
@@ -520,7 +520,7 @@ This is similar to the development configuration with the following differences:
       ...
 
 
-<a id="org2ab7843"></a>
+<a id="org499a1a6"></a>
 
 ### Build Process
 
@@ -533,7 +533,7 @@ If we look at the JavaScript file, we will see it is minified. Webpack uses its 
 If we look at the html file, we will see all the spaces have been removed. If we look closely, we will see a script element referencing our JavaScript file which the `HtmlWebpackPlugin` did for us.
 
 
-<a id="org6fa0724"></a>
+<a id="org3263a30"></a>
 
 ## Setting up CSS with webpack
 
@@ -545,7 +545,7 @@ Webpack by default only understands javascript and in order to make webpack unde
 -   **style-loader**: will take this string and will embed it in the style tag in index.html
 
 
-<a id="org727b278"></a>
+<a id="org488db0d"></a>
 
 ### Add the configuration to webpack
 
@@ -563,14 +563,14 @@ Webpack by default only understands javascript and in order to make webpack unde
 -   **test** will tell the webpack to **use** style-loader and css-loader for all the .css files
 
 
-<a id="org7f9d699"></a>
+<a id="org941ca65"></a>
 
 ## Setting up CSS with webpack (Production)
 
     npm i --save-dev mini-css-extract-plugin
 
 
-<a id="orge9aad8a"></a>
+<a id="org55ee0c2"></a>
 
 ### Configuration to production mode
 
@@ -587,7 +587,7 @@ Webpack by default only understands javascript and in order to make webpack unde
 -   **MiniCssExtractPlugin** extracts CSS and create a CSS file per JS file
 
 
-<a id="orgd0b1103"></a>
+<a id="org4775790"></a>
 
 ## Setting up Sass with webpack
 
@@ -597,7 +597,7 @@ Webpack by default only understands javascript and in order to make webpack unde
 -   **sass-loader**: loads a Sass/SCSS file and compiles it to CSS. (This Loader has internal dependencies which require node-sass)
 
 
-<a id="org32d2f02"></a>
+<a id="orgd995e23"></a>
 
 ### Sass configuration
 
@@ -613,7 +613,7 @@ Webpack by default only understands javascript and in order to make webpack unde
 We just need to add the sass-loader ahead of css-loader, so now first, the .scss file compiles back to CSS and after that process remains the same as explained above.
 
 
-<a id="org9e7d5ec"></a>
+<a id="org7e14b17"></a>
 
 ### Sass configuration for production environment
 
