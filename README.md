@@ -605,7 +605,7 @@ Webpack by default only understands javascript and in order to make webpack unde
           {
     	test: /\.(s(a|c)ss)$/,
     	use: ['style-loader','css-loader', 'sass-loader'] 
-          {	
+          }	
         ]
     }
 
